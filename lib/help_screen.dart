@@ -1,4 +1,4 @@
-import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class HelpAndSupportScreen extends StatelessWidget {
@@ -114,9 +114,10 @@ class HelpAndSupportScreen extends StatelessWidget {
                     height: 15,
                   ),
                   SizedBox(
-                    child:  TextFormField(
-                      style: TextStyle(fontSize: 40.0, height: 4.0, color: Colors.black),
-                      decoration: InputDecoration(
+                    child:  TextField(
+                      style: TextStyle( height: 1.5, color: Colors.black),
+                      decoration:
+                      InputDecoration(
                         contentPadding: EdgeInsets.all(1),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -124,31 +125,42 @@ class HelpAndSupportScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
+                      maxLines: 8,
+                      minLines: 5,
                     ),
                   ),
                   SizedBox(
-                    height: 270,
+                    height: 315,
                   ),
                 ],
               ),
             ),
 
             Container(
-              padding: EdgeInsets.only(right: 20,left: 20,top: 5,bottom: 5),
-              height: 50.0,
-              width: double.infinity,
+             // padding: EdgeInsets.only(right: 50,left: 50,top: 5,bottom: 5),
+              height: 80.0,
+              width:500,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  gradient: LinearGradient(colors: [Color(0xFF3120E0), Color(0xFF00E7FF)])
 
-              decoration: BoxDecoration(gradient: LinearGradient(colors: [Colors.blue, Colors.lightBlueAccent])),
-              child: ElevatedButton(
+              ),
+              child:
+              MaterialButton(
                 onPressed: () {},
-                style: ElevatedButton.styleFrom(primary: Colors.transparent, shadowColor: Colors.transparent),
+                shape: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(15),
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  ),
+                ) ,
                 child: Text('Done',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
-                  ),),
-
+                  ),
+                ),
               ),
             )
           ],

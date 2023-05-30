@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SettingPage extends StatelessWidget {
@@ -177,18 +176,27 @@ class SettingPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 240,
+                    height: 270,
                   ),
-                  Container(
+
+                 Container(
+                    //padding: EdgeInsets.only(right: 50,left: 50,top: 5,bottom: 5),
+                    height: 50.0,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [Colors.red[100]!, Colors.red[900]!],
-                        ),),
-                    child: ElevatedButton(
+                      borderRadius: BorderRadius.circular(15),
+                        gradient: LinearGradient(colors: [Color(0xFF3120E0), Color(0xFF00E7FF)])
+
+                    ),
+                    child:
+                MaterialButton(
                       onPressed: () {},
+                  shape: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    borderSide: BorderSide(
+                      color: Colors.white,
+                    ),
+                  ) ,
                       child: Text('Save',
                         style: TextStyle(
                           color: Colors.white,
@@ -196,13 +204,8 @@ class SettingPage extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                      ),
                     ),
-                  ),
+                  )
                 ],
               ),
             ),
